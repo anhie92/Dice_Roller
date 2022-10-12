@@ -17,9 +17,10 @@ int DiceRandom(out int diceOne, out int diceTwo)
         Environment.Exit(0);
     }
     Random firstDice = new Random();
-    Random secondDice = new Random();
+    
     diceOne = firstDice.Next(1, diceSides);
-    diceTwo = secondDice.Next(1, diceSides);
+    
+    diceTwo = firstDice.Next(1, diceSides);
 
     return diceSides;
 
@@ -28,75 +29,75 @@ int DiceRandom(out int diceOne, out int diceTwo)
 //METHOD FOR SIXSIDED DICE
 string SixSidedDice(int diceOne, int diceTwo)
 {
-    string results;
+    
     if(diceOne==1 && diceTwo==1)
     {
-        results = $"you rolled Snake Eyes: {diceOne} and {diceTwo}";
-        return results;
+        
+        return $"you rolled Snake Eyes: {diceOne} and {diceTwo}";
     }
     else if (diceOne == 1 && diceTwo == 2)
     {
-        results = $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
-        return results;
+        
+        return $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
     }
     else if (diceOne == 2 && diceTwo == 1)
     {
-        results = $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
-        return results;
+        
+        return $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
     }
     else if (diceOne ==6 && diceTwo ==6)
     {
-        results = "you rolled Box Cars: Two 6s";
-        return results;
+        
+        return  "you rolled Box Cars: Two 6s";
     }
     else if(diceOne+diceTwo==7 || diceOne+diceTwo==11)
     {
-        results = $"you rolled {diceOne} and {diceTwo} A total of 7 or 11 YOU WINNN!!!";
-        return results;
+        
+        return $"you rolled {diceOne} and {diceTwo} A total of 7 or 11 YOU WINNN!!!";
     }
     else
     {
-        results = $"you rolled {diceOne} and {diceOne}";
-        return results;
         
+        return $"you rolled {diceOne} and {diceTwo}";
+
     }
 }
 
 // BONUS WINNING COMBO BESIDES SIX SIDED DICE
 string EightSidedDice(int diceOne, int diceTwo)
 {
-    string results;
+    
     if (diceOne == 1 && diceTwo == 1)
     {
-        results = $"you rolled Snake Eyes: {diceOne} and {diceTwo}";
-        return results;
+        
+        return $"you rolled Snake Eyes: {diceOne} and {diceTwo}";
     }
     else if (diceOne == 1 && diceTwo == 2)
     {
-        results = $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
-        return results;
+        
+        return $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
     }
     else if (diceOne == 2 && diceTwo == 1)
     {
-        results = $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
-        return results;
+        
+        return $"you rolled Ace Deuce: a {diceOne} and {diceTwo}";
     }
     else if (diceOne == 6 && diceTwo == 6)
     {
-        results = "you rolled Box Cars: Two 6s";
-        return results;
+        
+        return "you rolled Box Cars: Two 6s";
     }
     else if (diceOne + diceTwo == 7 || diceOne + diceTwo == 11)
     {
-        results = $"you rolled {diceOne} and {diceTwo} A total of 7 or 11 YOU WINNN!!!";
-        return results;
+        
+        return $"you rolled {diceOne} and {diceTwo} A total of 7 or 11 YOU WINNN!!!";
     }
     
     
     else
     {
-        results = $"you rolled {diceOne} and {diceOne}";
-        return results;
+        
+        return $"you rolled {diceOne} and {diceTwo}";
 
     }
 }
